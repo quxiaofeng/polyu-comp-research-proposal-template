@@ -1,0 +1,269 @@
+% !TEX program = xelatex
+\documentclass[
+  11pt,
+  a4paper,
+  oneside
+]{article}
+
+%%%%% Prepare Packages for Formatting
+\usepackage{setspace}
+\usepackage{geometry}
+\geometry{tmargin=0.8in,bmargin=0.8in,lmargin=0.8in,rmargin=0.8in,headsep=0.0in,headheight=0.5in,foot=30.0pt}
+\usepackage{float}
+\usepackage{fancyhdr}         %draw header and foot
+
+%%%%% CONFIG ABOUT HEADER AND FOOT
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{}
+\chead{}
+\rhead{{\footnotesize \textbf{(page \thepage)}}}  %% PUT THE PAGE ON TOP RIGHT BUT NOT WORK
+\lfoot{}
+\cfoot{}
+\rfoot{{\footnotesize \slash...\thepage}}  %% PUT THE PAGE ON TOP RIGHT BUT NOT WORK
+\setlength\parindent{0pt}
+\renewcommand{\headrulewidth}{0pt} % remove lines as well
+\renewcommand{\footrulewidth}{0pt}
+
+%%%%% Prepare Packages for Text
+% \usepackage[utf8]{inputenc}   %encoding
+\usepackage[T1]{fontenc}      %encoding
+\usepackage{times}            %font
+\usepackage[english]{babel}
+\usepackage{titlesec}
+\titleformat{\section}
+{\normalfont\normalsize\bfseries}{\thesection.}{1em}{}
+\usepackage{blindtext}
+\usepackage[colorlinks=true,
+            urlcolor=blue]{hyperref}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{ulem}
+\usepackage{titling}
+\usepackage{xeCJK}
+\usepackage{xltxtra}
+\setmainfont{Arial}
+
+%%%%% Helper Macros
+%
+\newcommand{\aLargeSquareToFill}{\fbox{\phantom{\rule{0.38in}{0.26in}}}}
+%
+\newcommand{\titlepart}{\thispagestyle{empty}
+\pdfbookmark[0]{Front Page}{Front Page}
+\label{sec:frontpage}
+\begin{center}
+\textbf{THE HONG KONG POLYTECHNIC UNIVERSITY\\
+Faculty of Engineering\\
+Engineering Doctorate Programme\\
+\vspace{3ex}
+RESEARCH PROJECT PROPOSAL}
+\end{center}
+
+\vspace{6ex}
+
+Name of Candidate:\uline{
+\phantom{xxxxxxxxxxxxxxxxxxx}
+\theauthor
+\hfill\phantom{x}}
+
+\vspace{3ex}
+
+Date of Admission to this programme:\uline{
+\phantom{xxxxx}
+\admissionDate
+\hfill\phantom{x}}
+
+\vspace{3ex}
+
+\studyTimeMode
+
+\leftskip=0.32in}
+
+
+%%%%% Fill The Blanks with Personal Information
+\author{Applicant Full Name}
+\date{\today}
+\title{The title of the proposal}
+\newcommand{\admissionDate}{\today}
+\newcommand{\studyTimeMode}{Full time mode}
+% \newcommand{\studyTimeMode}{Part time mode}
+
+%%%%% Begin Document
+\hypersetup{
+    pdfinfo={
+    pdftitle=\thetitle,
+    pdfauthor=\theauthor,
+    pdfdate=\thedate
+    }
+}
+
+\begin{document}
+
+%%%%% Main Text
+\titlepart
+
+\section{Project Title:}
+
+\blindtext
+
+\section{Project Objectives: (Purpose of proposed investigation)}
+
+\blindtext
+
+\section{Scope and Background of Research:}
+(Please identify key issues/problems to be addressed)
+
+\blindtext
+
+\section{Research Methodology:}
+
+\blindtext
+
+\section{Project Significance and Value:}
+
+\blindtext
+
+\section{Details of Any External Collaboration:}
+
+\blindtext
+
+In these circumstances, are there likely to be any complications associated with the publication of your thesis? Give details.
+
+\section{Project schedule}
+
+\blindtext
+
+\clearpage
+
+\section{Research Ethics / Safety Approval}
+
+(For ethics approval, (Temporary) Chief Supervisor please read the Guidelines for Ethics Review of Research/Teaching Projects Involving Human Subjects, which are available at \url{https://www2.polyu.edu.hk/research_handbook/appendix/ap6g.pdf}, and make sure that ethics approval is obtained if your project involves human subjects.  For safety approval, please read the policy and procedures for safety approval available at the Health, Safety \& Environment Office Homepage.   Please attach the approval letter where appropriate.)\\
+
+(Temporary) Chief Supervisor confirms that approval:\\
+\begin{table}[H]
+\centering 
+\begin{tabular}{ l >{\centering\arraybackslash}m{1in} >{\centering\arraybackslash}m{1in} >{\centering\arraybackslash}m{1in} @{}m{0pt}@{}} 
+        &   \begin{minipage}[t][0.38in][t]{0.6in}
+            \footnotesize * has been obtained
+            \end{minipage}
+                &   \begin{minipage}[t][0.38in][t]{0.8in}
+                    \footnotesize * is not required
+                    \end{minipage}
+                        &   \begin{minipage}[t][0.38in][t]{1.0in}
+                            \footnotesize * will be obtained before the start of the project
+                            \end{minipage} &\\
+[4.0ex]
+Human Research Ethics
+        & \aLargeSquareToFill 
+                & \aLargeSquareToFill
+                        & \aLargeSquareToFill &\\ % inserting body of the table
+[6.0ex]
+Animal Research Ethics
+        & \aLargeSquareToFill 
+                & \aLargeSquareToFill
+                        & \aLargeSquareToFill &\\ % inserting body of the table
+[6.0ex]
+Biological Safety
+        & \aLargeSquareToFill 
+                & \aLargeSquareToFill
+                        & \aLargeSquareToFill &\\ % inserting body of the table
+[6.0ex]
+Ionizing Radiation Safety
+        & \aLargeSquareToFill 
+                & \aLargeSquareToFill
+                        & \aLargeSquareToFill &\\ % inserting body of the table
+[6.0ex]
+Non-ionizing Radiation Safety
+        & \aLargeSquareToFill 
+                & \aLargeSquareToFill
+                        & \aLargeSquareToFill &\\ % inserting body of the table
+[6.0ex]
+Chemical Safety
+        & \aLargeSquareToFill 
+                & \aLargeSquareToFill
+                        & \aLargeSquareToFill &\\ % inserting body of the table
+[6.0ex]
+\end{tabular}
+\end{table}
+\footnotesize{(* Please tick as appropriate)}
+
+\section{Statement of the Applicant}
+
+
+I wish to register for the research project component on the basis of the proposal given in this Form.\\
+
+
+I understand that, during the period of my registration with the University, I may not be a candidate for any other degree or award.\\
+
+
+I understand that, except with the specific permission of the EngD Programme Committee, I must prepare and defend my thesis in English.  (You are required to seek permission if another language, which is considered more appropriate to the subject, is to be used in the presentation of the thesis.  Please submit the justification together with this application)\\
+
+
+I undertake to abide by the general regulations of the University.\\
+
+
+Signature \uline{\hfill} Date \uline{\phantom{xxxxxxxx}\today\phantom{xxxxxxxxx}}\\
+\phantom{xxxxxxxxxxxxxxxxxxxxxxxxxx}{\scriptsize (Applicant)}\\
+
+Name of Applicant \uline{\phantom{xxxxxxxxxxxxxxxx}\theauthor\phantom{xxxxxxxxxxxxxxxx}}\\
+
+
+
+\section{Endorsement by the Proposed Chief Supervisor}
+
+\vspace{8ex}
+
+Signature of Chief Supervisor \uline{\hfill}
+Department \uline{\phantom{xxxxxxxx}Computing\phantom{xxxxxxxxxx}}\\
+
+\vspace{3ex}
+
+Name of Chief Supervisor \uline{\phantom{xxxxxxxxx} Supervior Name \hfill}
+Date \uline{\phantom{xxxxxx} \today \phantom{xxxxxxxxxxx}}\\
+
+\vspace{2ex}
+
+\textbf{\normalsize[Please send this form to the Departmental Research Committee]}\\
+
+\vspace{4ex}
+
+\section{Recommendation of Chairman of Departmental Research Committee}
+
+\vspace{5ex}
+
+I \uline{support \slash do not support}  this project proposal.\\
+
+\vspace{2ex}
+
+Comments:
+\uline{\phantom{x}\hfill}\\
+\uline{\phantom{x}\hfill}\\
+\uline{\phantom{x}\hfill}\\
+\uline{\phantom{x}\hfill}\\
+\uline{\phantom{x}\hfill}\\
+
+\vspace{8ex}
+
+Signature \uline{\hfill}  Date \uline{\phantom{xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}}\\
+\phantom{xxxxxxxxxxxxxxxxxxxxxxxxx}(Chairman, DRC)\\
+
+\vspace{5ex}
+
+\section{Recommendation of Head of Affiliated Department in the University}
+
+\vspace{5ex}
+
+I support this application, and confirm to the best of my knowledge that adequate facilities will be provided to enable the student to conduct and complete the research programme in an efficient and safe manner. I also agree to provide adequate research space for the applicant during the research programme.
+
+\vspace{8ex}
+
+Signature \uline{\hfill}  Date \uline{\phantom{xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}}\\
+\phantom{xxxxxxxxxxxxxxxxxxxxxx}(Head of Department)\\
+
+\vfill
+
+\textbf{\normalsize[After completing all sections, please return this form to the Ms Stephanie Wong, Secretary of EngD Programme Committee, Faculty of Engineering.]}
+\end{document}
+
+                                                                                     
