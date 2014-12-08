@@ -1,4 +1,4 @@
-polyu-comp-research-proposal-template
+HK PolyU COMP Research Proposal Template
 =====================================
 
 An unofficial research proposal template following the guide of Department of Computing, The Hong Kong Polytechnic University.
