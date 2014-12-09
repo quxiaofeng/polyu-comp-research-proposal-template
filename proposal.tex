@@ -37,6 +37,8 @@
 \usepackage[colorlinks=true,
             urlcolor=blue]{hyperref}
 \usepackage{graphicx}
+\usepackage[no-math]{fontspec}
+\usepackage{MnSymbol}
 \usepackage{amsmath}
 \usepackage{array}
 \usepackage{ulem}
@@ -48,6 +50,7 @@
 %%%%% Helper Macros
 %
 \newcommand{\aLargeSquareToFill}{\fbox{\phantom{\rule{0.38in}{0.26in}}}}
+\newcommand{\aLargeTickedSquare}{\fbox{\resizebox{0.38in}{0.26in}{$\checkmark$}} }
 %
 \newcommand{\titlepart}{\thispagestyle{empty}
 \pdfbookmark[0]{Front Page}{Front Page}
@@ -147,7 +150,7 @@ In these circumstances, are there likely to be any complications associated with
         &   \begin{minipage}[t][0.38in][t]{0.6in}
             \footnotesize * has been obtained
             \end{minipage}
-                &   \begin{minipage}[t][0.38in][t]{0.8in}
+                &   \begin{minipage}[t][0.38in][t]{0.9in}
                     \footnotesize * is not required
                     \end{minipage}
                         &   \begin{minipage}[t][0.38in][t]{1.0in}
@@ -155,35 +158,35 @@ In these circumstances, are there likely to be any complications associated with
                             \end{minipage} &\\
 [4.0ex]
 Human Research Ethics
-        & \aLargeSquareToFill 
+        & \aLargeTickedSquare
                 & \aLargeSquareToFill
                         & \aLargeSquareToFill &\\ % inserting body of the table
-[6.0ex]
+[4.0ex]
 Animal Research Ethics
-        & \aLargeSquareToFill 
+        & \aLargeTickedSquare 
                 & \aLargeSquareToFill
                         & \aLargeSquareToFill &\\ % inserting body of the table
-[6.0ex]
+[4.0ex]
 Biological Safety
-        & \aLargeSquareToFill 
+        & \aLargeTickedSquare 
                 & \aLargeSquareToFill
                         & \aLargeSquareToFill &\\ % inserting body of the table
-[6.0ex]
+[4.0ex]
 Ionizing Radiation Safety
-        & \aLargeSquareToFill 
+        & \aLargeTickedSquare 
                 & \aLargeSquareToFill
                         & \aLargeSquareToFill &\\ % inserting body of the table
-[6.0ex]
+[4.0ex]
 Non-ionizing Radiation Safety
         & \aLargeSquareToFill 
                 & \aLargeSquareToFill
                         & \aLargeSquareToFill &\\ % inserting body of the table
-[6.0ex]
+[4.0ex]
 Chemical Safety
         & \aLargeSquareToFill 
                 & \aLargeSquareToFill
                         & \aLargeSquareToFill &\\ % inserting body of the table
-[6.0ex]
+[4.0ex]
 \end{tabular}
 \end{table}
 \footnotesize{(* Please tick as appropriate)}
@@ -232,7 +235,7 @@ Date \uline{\phantom{xxxxxx} \today \phantom{xxxxxxxxxxx}}\\
 
 \vspace{5ex}
 
-I \uline{support \slash do not support}  this project proposal.\\
+I \uline{support \slash{} do not support}  this project proposal.\\
 
 \vspace{2ex}
 
